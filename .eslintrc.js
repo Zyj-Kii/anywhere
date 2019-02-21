@@ -4,14 +4,21 @@ module.exports = {
     "node": true
   },
   "extends": "eslint:recommended",
+  "parser": "babel-eslint",
   "rules": {
+    "no-console": [
+      "error",
+      {
+        "allow": ["warn", "error", "info"]
+      }
+    ],
     "indent": [
       "error",
       2
     ],
     "linebreak-style": [
       "error",
-      "windows"
+      "unix"
     ],
     "quotes": [
       "error",

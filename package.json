@@ -2,10 +2,15 @@
   "name": "anywhere",
   "version": "1.0.0",
   "description": "a tiny anywhere web sever",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint .",
+    "fix": "eslint --fix ."
   },
+  "pre-commit": [
+    "fix",
+    "lint"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Zyj-Kii/anywhere.git"
@@ -15,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/Zyj-Kii/anywhere/issues"
   },
-  "homepage": "https://github.com/Zyj-Kii/anywhere#readme"
+  "homepage": "https://github.com/Zyj-Kii/anywhere#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.14.1",
+    "pre-commit": "^1.2.2"
+  }
 }
